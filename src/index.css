@@ -11,3 +11,49 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.aboutForm{
+  margin-top: 60px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: fit-content;
+  min-width: 600px;
+}
+
+.formGroup{
+  min-width: 400px;
+  margin: 15px;
+}
+
+.formDet{
+  margin-bottom: 20px;
+  min-width: 400px;
+}
+
+.formDet select{
+  margin-top: 20px;
+}
+
+.button{
+  margin-top: 20px;
+  min-width: 300px;
+}
+
+.inputField{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.inputField FormControl{
+  min-width: 300px;
+}
+
+.btn{
+  margin-right: 10px;
+}
