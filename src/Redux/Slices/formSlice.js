@@ -17,25 +17,23 @@ const formSlice = createSlice({
   name: "form",
   initialState,
   reducers: {
-    setFormData: (state, action) => {
-      return {
-        ...state,
+    setFormInput: (state, action) => {
+      state.push({
+        id: state.length,
         ...action.payload,
-      };
+      });
     },
     clearFormData: (state) => {
-      return {
-        name: "",
-        description: "",
-        image: "",
-        price: "",
-        benefits: [""],
-        additionalBenefits: [""],
-        categories: "",
-      };
+      state.name = "";
+      state.description = "";
+      state.image = "";
+      state.price = "";
+      state.benefits.length = 0;
+      state.additionalBenefits.length = 0; 
+      state.categories = "";
     },
   },
 });
 
-export const { setFormData, clearFormData } = formSlice.actions;
+export const { setFormInput, clearFormData, } = formSlice.actions;
 export default formSlice.reducer;

@@ -5,13 +5,13 @@ import { Button, FormControl, FormGroup, FormLabel } from "react-bootstrap";
 import { AboutData } from "../Datas/AboutProduct";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import { clearFormData, setFormData } from "../Redux/Slices/formSlice";
+import { setFormInput, } from "../Redux/Slices/formSlice";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 const About = () => {
   const dispatch = useDispatch();
-  
+
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -60,14 +60,24 @@ const About = () => {
   };
 
   const handleRedirect = (e) => {
-    e.preventDefault()
-    navigate('/additonalDetails')
-  }
+    // e.preventDefault();
+    navigate("/additonalDetails");
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(setFormData(formData));
-    dispatch(clearFormData())
+    dispatch(setFormInput(formData));
+    handleRedirect();
+    // dispatch(clearFormData());
+    setFormInput({
+      name: "",
+      description: "",
+      image: "",
+      price: "",
+      benefits: [""],
+      additionalBenefits: [""],
+      categories: "",
+    });
   };
 
   console.log(formData);
@@ -194,9 +204,9 @@ const About = () => {
           value={formData.categories}
           onChange={handleInputChange}
         >
-          <option value="1">Men</option>
-          <option value="2">Women</option>
-          <option value="3">Kids</option>
+          <option value="Men">Men</option>
+          <option value="Women">Women</option>
+          <option value="Kids">Kids</option>
         </select>
       </div>
       <Button className="button" onClick={handleSubmit}>

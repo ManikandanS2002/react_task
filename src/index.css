@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+html{
+  margin: 15px;
+}
+
 
 .aboutForm{
   margin-top: 60px;
@@ -50,10 +54,141 @@ code {
   justify-content: space-between;
 }
 
-.inputField FormControl{
+ .inputField FormControl{
   min-width: 300px;
 }
 
 .btn{
   margin-right: 10px;
 }
+
+/* .itemCart{
+  width: 300px;
+  height: 600px;
+    background: greenyellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+}  */
+
+.itemCart img{
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.first span{
+  width: fit-content;
+  padding: 8px 8px;
+  background: goldenrod;
+  border-radius: 10px;
+  border: 5px;
+  border-left: 150px;
+  position: absolute;
+    top: 40%;
+    right: 10px;
+}
+
+.first{
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.second{
+  padding: 10px;
+  width: 300px;
+}
+
+.container-cart{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(46, 45, 45, 0.1);
+}
+
+.itemCart{
+  cursor: pointer;
+  position: relative;
+  width: 300px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f1eaea;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.second p{
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
+/* Product Page */
+
+.productPage{
+  padding: 10px;
+  border-radius: 10px;
+  padding-top: 20px;
+  background: #f1eaea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.productImg img{
+  border-radius: 10px;
+  width: 500px;
+  height: 500px;
+}
+
+ul{
+  list-style: none;
+}
+
+.price{
+  font-weight: bold;
+}
+
+.price span{
+  border-radius: 5px;
+  padding: 5px 5px;
+  background: rgb(229, 151, 35);
+  color: white;
+}
+
+.benefits{
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  min-width: 40%;
+  width:fit-content;
+  margin-bottom: 30px;
+}
+
+.benefits p{
+  font-weight: bold;
+}
+
+.additional{
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  min-width: 40%;
+  width:fit-content;
+  margin-bottom: 30px;
+}
+
+
+.additional p{
+  font-weight: bold;
+}
+
+
+
